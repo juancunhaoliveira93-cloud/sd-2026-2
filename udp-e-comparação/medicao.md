@@ -1,0 +1,5 @@
+- Medi 100 mensagens de 1 byte em localhost; só no teste usei TCP 5002 porque a porta 5000 estava ocupada (o código continua em 5000).
+- TCP: total de 7,7 ms, com média de 0,077 ms por mensagem.
+- UDP: total de 10,2 ms, com média de 0,102 ms por mensagem.
+- Nesta execução, o TCP levou 2,5 ms a menos no total (aproximadamente 24,5% menos tempo).
+- O TCP garante entrega ordenada e retransmite perdas; o UDP não oferece essas garantias, mas o resultado em localhost varia e não prova que TCP seja sempre mais rápido.
