@@ -1,0 +1,18 @@
+// Contrato compartilhado entre cliente e servidor.
+syntax = "proto3";
+
+package calculadora;
+
+service Calculadora {
+  rpc Somar (Operandos) returns (Resultado);
+  rpc Multiplicar (Operandos) returns (Resultado);
+}
+
+message Operandos {
+  int32 a = 1;  // 1 e 2 são identificadores dos campos no formato binário.
+  int32 b = 2;
+}
+
+message Resultado {
+  int32 valor = 1;
+}
